@@ -1,0 +1,124 @@
+### Sriteja Madishetty (He)
+
+#### Contact
+- **Email**: smadish1@umbc.edu
+- **LinkedIn**: [linkedin.com/in/sritejamadishetty](https://www.linkedin.com/in/sritejamadishetty/)
+- **GitHub**: [github.com/Sritejam](https://github.com/Sritejam)
+- **Medium**: [medium.com/@madishetty8](https://medium.com/@madishetty8)
+
+---
+
+#### Education
+
+**University of Maryland, Baltimore County (UMBC), Maryland, USA**  
+- Master of Professional Studies (M.P.S.) in Data Science  
+- GPA: 3.74  
+- Jan. 2023 – Dec. 2024  
+- Status: Graduated
+
+**Malla Reddy Engineering College, Hyderabad, India**  
+- Bachelor of Technology (B.Tech) in Computer Science  
+- GPA: 3.62  
+- 2015 – 2019  
+
+---
+
+#### Projects
+
+**1. LLM-Driven Retrieval-Augmented Generation System for Query Answering**  
+- **Technologies**: Python, GPT-3.5, FAISS, BERT, BM25  
+- Designed and implemented a hybrid retrieval system combining FAISS for vector search, BM25 for term-based matching, and BERT for re-ranking retrieved results.  
+- Created a custom semantic chunking algorithm to preprocess data into meaningful segments, enhancing retrieval precision.  
+- Incorporated metadata tagging for privacy and compliance, ensuring sensitive information remained secure during retrieval and generation.  
+- Utilized GPT-3.5 to generate high-quality responses for UMBC-specific queries, achieving state-of-the-art performance metrics:
+  - **Mean Retrieval Score (Cosine Similarity)**: 0.5194
+  - **BERTScore (F1)**: 0.8787  
+
+**2. Fine-Tuning LLMs for Treatment Prediction from Clinical Data**  
+- **Technologies**: Python, Clinical BERT, Hugging Face, SMOTE  
+- Developed a predictive model to identify treatments in clinical notes, achieving a **94% weighted F1-score** on highly imbalanced data.  
+- Fine-tuned Clinical BERT using domain-specific embeddings, with robust handling of class imbalance via SMOTE and stratified sampling.  
+- Conducted advanced preprocessing and cross-validation to ensure model reliability and generalization.  
+
+**3. Employee Attrition Prediction**  
+- **Technologies**: Python, K-Means, PCA, DBSCAN  
+- Designed an unsupervised learning pipeline to analyze employee attrition patterns, achieving an **86% weighted F1-score**.  
+- Utilized K-Means and DBSCAN clustering combined with PCA for dimensionality reduction, uncovering actionable insights in employee retention strategies.  
+
+**4. Stock Trend Analysis**  
+- **Technologies**: Python, Pandas, Matplotlib, NumPy  
+- Analyzed stock prices using key indicators such as Moving Averages, RSI, and Bollinger Bands.  
+- Delivered insights into market trends and trading signals through advanced data visualization techniques.  
+
+---
+
+#### Certifications
+
+- **Oracle Cloud Infrastructure 2024 Generative AI Professional** ([Certification Link](https://tinyurl.com/3h32mn2t)) (Issued: July 2024)
+
+---
+
+#### Volunteering
+
+**Camp Counselor**  
+**VOICE 4 Girls**  
+- **Dec 2018 – 1 Month**  
+- Educated high school students on critical topics such as health, safety, rights, self-awareness, and future planning through an activity-based learning program.  
+- Taught action-oriented life skills, including interpersonal communication, leadership, problem-solving, and critical thinking.  
+
+---
+
+#### Professional Experience
+
+**HCL Technologies, Hyderabad, India**  
+**Senior Software Engineer**  
+_Feb. 2022 – Nov. 2022_
+- Optimized SQL operations in ETL pipelines, ensuring data accuracy and efficient processing.
+- Developed and deployed shell scripts to automate repetitive tasks, enhancing system efficiency.
+- Led server maintenance, upgrades, and disaster recovery efforts to ensure business continuity.
+- Mentored junior engineers, fostering technical growth and effective knowledge transfer.
+
+**Wipro, Pune, India**  
+**Project Engineer**  
+_Jun. 2019 – Feb. 2022_
+- Automated CI/CD pipelines with Jenkins, integrating tools like SonarQube and Git to streamline deployments.
+- Monitored and optimized Red Hat Linux server performance for application uptime.
+- Implemented ELK Stack for system monitoring, reducing downtime and improving operational insights.
+- Created shell scripts to automate routine tasks, minimizing manual intervention and errors.
+
+---
+
+#### Skills
+
+**Large Language Models (LLMs):**  
+- BERT, GPT, Sentence Transformer Models, FAISS, BM25, Retrieval-Augmented Generation (RAG), Fine-Tuning LLMs, Llama
+
+**Programming & Scripting:**  
+- Python, SQL, Bash
+
+**Data Analysis & Visualization:**  
+- Pandas, NumPy, Matplotlib, Seaborn, Plotly, Tableau
+
+**Machine Learning:**  
+- Linear Regression, Logistic Regression, Random Forest, SVM, k-NN, K-Means, DBSCAN, XGBoost, PCA
+
+**Natural Language Processing (NLP):**  
+- NLTK, spaCy
+
+**Big Data Technologies:**  
+- PySpark
+
+**Cloud Platforms:**  
+- AWS (SageMaker, Glue, Kinesis, EMR, Bedrock, S3, EC2)
+
+**CI/CD & Automation:**  
+- Jenkins
+
+**Version Control & Collaboration:**  
+- GitHub, GitLab
+
+**Other Skills:**  
+- Agile, JIRA, Control-M
+
+---
+
