@@ -18,7 +18,7 @@ embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 llm = ChatOpenAI(model="gpt-4o-mini", api_key=OPENAI_API_KEY)
 
 # Load and split the document
-document_loader = TextLoader("rag/product-data.txt")
+document_loader = TextLoader("product-data.txt")
 document = document_loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=50)
