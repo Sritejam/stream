@@ -38,15 +38,10 @@ CUSTOM_PROMPT = os.getenv("promptss")
 #     "If the answer is not available in the context, acknowledge that you cannot answer and ask them to reach out to him. "
 #     "Always provide links when giving contact information. Summarize and provide a neat answer."
 # )
-# Define a custom prompt using the loaded secret
-prompt = PromptTemplate(
-    template=CUSTOM_PROMPT,
-    input_variables=["context", "question"],
-)
 
 
 # Create the Conversational Retrieval Chain
-rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever , combine_docs_chain_kwargs={"prompt": prompt})
+rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
 
 # Streamlit UI
 st.title("Ask About Sriteja Madishetty")
@@ -57,8 +52,16 @@ if "chat_history" not in st.session_state:
 
 question = st.text_input("Your Question:")
 
+# Custom Prompt Application
+def apply_custom_prompt(context, question):
+    """Formats the custom prompt with the retrieved context and question."""
+    return CUSTOM_PROMPT.format(context=context, question=question)
+
+
 if question:
     # Call the chain with the current question and chat history
+     # Format the prompt with the retrieved context and question
+    question = apply_custom_prompt(CUSTOM_PROMPT, question)
     response = rag_chain({"question": question, "chat_history": st.session_state.chat_history})
     
     # Display the response
