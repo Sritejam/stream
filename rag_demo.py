@@ -14,8 +14,6 @@ if not OPENAI_API_KEY:
     st.error("OpenAI API key is not set in the environment variables.")
     raise ValueError("OpenAI API key is missing.")
 
-from sentence_transformers import SentenceTransformer
-
 embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 llm = ChatOpenAI(model="gpt-3.5-turbo", api_key=OPENAI_API_KEY)
 
