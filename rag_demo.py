@@ -54,10 +54,10 @@ question = st.text_input("Your Question:")
 
 # Custom Prompt Application
 def apply_custom_prompt(context, question):
-    """Formats the custom prompt with the retrieved context and question."""
-    return CUSTOM_PROMPT.format(context=context, question=question)
-
-
+    return (
+        f"{CUSTOM_PROMPT}\n\n"
+        f"Question: {question}\n\n"
+    )
 if question:
     # Call the chain with the current question and chat history
      # Format the prompt with the retrieved context and question
