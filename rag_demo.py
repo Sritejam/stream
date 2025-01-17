@@ -5,6 +5,7 @@ from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.chains import ConversationalRetrievalChain
+from langchain.prompts import PromptTemplate
 import streamlit as st
 
 # Load the OpenAI API key
@@ -28,17 +29,24 @@ chunks = text_splitter.split_documents(document)
 vector_store = FAISS.from_documents(chunks, embeddings)
 retriever = vector_store.as_retriever()
 
-
-# Define the simplified prompt
-promptss = (
-    "You are a professional assistant specialized in answering questions strictly about Sriteja Madishetty. "
-    "Use the provided context to respond positively, highlighting the benefits of employing him. "
-    "If the answer is not available in the context, acknowledge that you cannot answer and ask them to reach out to him. "
-    "Always provide links when giving contact information. Summarize and provide a neat answer."
+# Load the custom prompt from secrets
+CUSTOM_PROMPT = os.getenv("promptss")
+# # Define the simplified prompt
+# promptss = (
+#     "You are a professional assistant specialized in answering questions strictly about Sriteja Madishetty. "
+#     "Use the provided context to respond positively, highlighting the benefits of employing him. "
+#     "If the answer is not available in the context, acknowledge that you cannot answer and ask them to reach out to him. "
+#     "Always provide links when giving contact information. Summarize and provide a neat answer."
+# )
+# Define a custom prompt using the loaded secret
+prompt = PromptTemplate(
+    template=CUSTOM_PROMPT,
+    input_variables=["context", "question"],
 )
 
+
 # Create the Conversational Retrieval Chain
-rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever )
+rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever , combine_docs_chain_kwargs={"prompt": prompt})
 
 # Streamlit UI
 st.title("Ask About Sriteja Madishetty")
