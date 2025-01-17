@@ -28,8 +28,35 @@ chunks = text_splitter.split_documents(document)
 vector_store = FAISS.from_documents(chunks, embeddings)
 retriever = vector_store.as_retriever()
 
+
+
+# Define a custom prompt
+custom_prompt_template = """
+You are a professional assistant specialized in answering questions strictly about Sriteja Madishetty.
+Use the provided context to respond positively and highlight beneficial aspects of employing him in Data Sciecne Field..
+Always provide links when available.
+If the answer is not available in the context, acknowledge that you cannot answer them to reachout to him.
+Summarize and Limit your responses to three concise sentences.
+He has build this website using Langchain, RAG techniques, GPT, Streamlit.
+
+{context}
+Question: {question}
+Answer:
+"""
+prompt = PromptTemplate(
+    template=custom_prompt_template,
+    input_variables=["context", "question"],
+)
+
+# Create the Conversational Retrieval Chain with a custom prompt
+rag_chain = ConversationalRetrievalChain.from_llm(
+    llm=llm, retriever=retriever, combine_docs_chain_kwargs={"prompt": prompt}
+)
+
+
+
 # Create the Conversational Retrieval Chain
-rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
+#rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
 
 # Streamlit UI
 st.title("Ask About Sriteja Madishetty")
