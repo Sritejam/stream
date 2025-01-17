@@ -21,7 +21,7 @@ llm = ChatOpenAI(model="gpt-4o-mini", api_key=OPENAI_API_KEY)
 document_loader = TextLoader("product-data.txt")
 document = document_loader.load()
 
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=50)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 chunks = text_splitter.split_documents(document)
 
 # Create a vector store with FAISS
