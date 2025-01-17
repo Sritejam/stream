@@ -119,8 +119,8 @@ if question:
     # Call the chain with the current question and chat history
      # Format the prompt with the retrieved context and question
     question = apply_custom_prompt(CUSTOM_PROMPT, question)
-    response = rag_chain({"question": question, "chat_history": st.session_state.chat_history})
-    
+    # response = rag_chain({"question": question, "chat_history": st.session_state.chat_history})
+    response = rag_chain({"question": question})
     # Display the response
     st.write(response["answer"])
     
