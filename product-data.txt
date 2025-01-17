@@ -8,13 +8,12 @@
 
 ---
 
-#### Education
+#### Education of Sriteja Madishetty: as on 2025
 
 **University of Maryland, Baltimore County (UMBC), Maryland, USA**  
 - Master of Professional Studies (M.P.S.) in Data Science  
 - GPA: 3.74  
 - Jan. 2023 – Dec. 2024  
-- Status: Graduated
 
 **Malla Reddy Engineering College, Hyderabad, India**  
 - Bachelor of Technology (B.Tech) in Computer Science  
@@ -23,7 +22,7 @@
 
 ---
 
-#### Projects
+#### Projects done in Masters relevant to masters in Data Science:
 
 **1. LLM-Driven Retrieval-Augmented Generation System for Query Answering**  
 - **Technologies**: Python, GPT-3.5, FAISS, BERT, BM25  
@@ -68,7 +67,7 @@
 
 ---
 
-#### Professional Experience
+#### Professional Experience before Masters in Data Science of total 4 years.
 
 **HCL Technologies, Hyderabad, India**  
 **Senior Software Engineer**  
@@ -88,7 +87,7 @@ _Jun. 2019 – Feb. 2022_
 
 ---
 
-#### Skills
+#### Skills of Sriteja:
 
 **Large Language Models (LLMs):**  
 - BERT, GPT, Sentence Transformer Models, FAISS, BM25, Retrieval-Augmented Generation (RAG), Fine-Tuning LLMs, Llama
