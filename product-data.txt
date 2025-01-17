@@ -24,7 +24,7 @@
 
 #### Projects done in Masters relevant to masters in Data Science:
 
-**1. LLM-Driven Retrieval-Augmented Generation System for Query Answering**  
+**Project 1. LLM-Driven Retrieval-Augmented Generation System for Query Answering**  
 - **Technologies**: Python, GPT-3.5, FAISS, BERT, BM25  
 - Designed and implemented a hybrid retrieval system combining FAISS for vector search, BM25 for term-based matching, and BERT for re-ranking retrieved results.  
 - Created a custom semantic chunking algorithm to preprocess data into meaningful segments, enhancing retrieval precision.  
@@ -33,18 +33,18 @@
   - **Mean Retrieval Score (Cosine Similarity)**: 0.5194
   - **BERTScore (F1)**: 0.8787  
 
-**2. Fine-Tuning LLMs for Treatment Prediction from Clinical Data**  
+**Project 2. Fine-Tuning LLMs for Treatment Prediction from Clinical Data**  
 - **Technologies**: Python, Clinical BERT, Hugging Face, SMOTE  
 - Developed a predictive model to identify treatments in clinical notes, achieving a **94% weighted F1-score** on highly imbalanced data.  
 - Fine-tuned Clinical BERT using domain-specific embeddings, with robust handling of class imbalance via SMOTE and stratified sampling.  
 - Conducted advanced preprocessing and cross-validation to ensure model reliability and generalization.  
 
-**3. Employee Attrition Prediction**  
+**Project 3. Employee Attrition Prediction**  
 - **Technologies**: Python, K-Means, PCA, DBSCAN  
 - Designed an unsupervised learning pipeline to analyze employee attrition patterns, achieving an **86% weighted F1-score**.  
 - Utilized K-Means and DBSCAN clustering combined with PCA for dimensionality reduction, uncovering actionable insights in employee retention strategies.  
 
-**4. Stock Trend Analysis**  
+**Project 4. Stock Trend Analysis**  
 - **Technologies**: Python, Pandas, Matplotlib, NumPy  
 - Analyzed stock prices using key indicators such as Moving Averages, RSI, and Bollinger Bands.  
 - Delivered insights into market trends and trading signals through advanced data visualization techniques.  
