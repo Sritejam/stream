@@ -90,18 +90,12 @@ llm = ChatOpenAI(model="gpt-3.5-turbo", api_key=OPENAI_API_KEY)
 
 # Create a vector store with FAISS
 vector_store = FAISS.from_documents(chunks, embeddings)
-retriever = vector_store.as_retriever(search_kwargs={"k": 3})
+# retriever = vector_store.as_retriever(search_kwargs={"k": 3})
+retriever = vector_store.as_retriever()
+
 
 # Load the custom prompt from secrets
 CUSTOM_PROMPT = os.getenv("promptss")
-# # Define the simplified prompt
-# promptss = (
-#     "You are a professional assistant specialized in answering questions strictly about Sriteja Madishetty. "
-#     "Use the provided context to respond positively, highlighting the benefits of employing him. "
-#     "If the answer is not available in the context, acknowledge that you cannot answer and ask them to reach out to him. "
-#     "Always provide links when giving contact information. Summarize and provide a neat answer."
-# )
-
 
 # Create the Conversational Retrieval Chain
 rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
