@@ -16,16 +16,7 @@ if not OPENAI_API_KEY:
 
 from sentence_transformers import SentenceTransformer
 
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-class LocalEmbeddings:
-    def embed_documents(self, texts):
-        return embedding_model.encode(texts, show_progress_bar=True)
-    
-    def embed_query(self, text):
-        return embedding_model.encode([text], show_progress_bar=False)[0]
-
-embeddings = LocalEmbeddings()
-
+embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 llm = ChatOpenAI(model="gpt-3.5-turbo", api_key=OPENAI_API_KEY)
 
 # Load and split the document
