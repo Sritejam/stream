@@ -6,16 +6,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.chains import ConversationalRetrievalChain
 import streamlit as st
-from langchain.prompts import PromptTemplate
-
-# Define the prompt
-PROMPT = PromptTemplate(
-    input_variables=["context", "query"],
-    template="You are a professional assistant specialized in answering questions strictly about Sriteja Madishetty. "
-             "Use the provided context to respond positively, highlighting the benefits of employing him. "
-             "If the answer is not available in the context, acknowledge that you cannot answer and ask them to reach out to him. "
-             "Always provide links when giving contact information. Summarize and provide a neat answer."
-)
 
 # Load the OpenAI API key
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -48,7 +38,7 @@ promptss = (
 )
 
 # Create the Conversational Retrieval Chain
-rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever, prompt=PROMPT  )
+rag_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever )
 
 # Streamlit UI
 st.title("Ask About Sriteja Madishetty")
