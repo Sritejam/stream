@@ -15,7 +15,7 @@ if not OPENAI_API_KEY:
 
 # Initialize embeddings and LLM
 embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
-llm = ChatOpenAI(model="gpt-4o-mini", api_key=OPENAI_API_KEY)
+llm = ChatOpenAI(model="gpt-3.5-turbo", api_key=OPENAI_API_KEY)
 
 # Load and split the document
 document_loader = TextLoader("product-data.txt")
