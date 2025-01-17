@@ -14,14 +14,13 @@ cachetools==5.5.0
 certifi==2024.12.14
 charset-normalizer==3.4.1
 chroma-hnswlib==0.7.6
-langchain-chroma==0.2.0
-chromadb>=0.4.0,<0.6.0
 click==8.1.8
 coloredlogs==15.0.1
 dataclasses-json==0.6.7
 Deprecated==1.2.15
 distro==1.9.0
 durationpy==0.9
+faiss-cpu==1.9.0.post1
 fastapi==0.115.6
 filelock==3.16.1
 flatbuffers==24.12.23
@@ -50,6 +49,7 @@ jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
 kubernetes==31.0.0
 langchain==0.3.14
+langchain-chroma==0.2.0
 langchain-community==0.3.14
 langchain-core==0.3.29
 langchain-openai==0.3.0
